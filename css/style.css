@@ -1,0 +1,169 @@
+@import url("https://use.typekit.net/ism2vkl.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #f4f0e8;
+  font-family: alverata, serif;
+  font-weight: 300;
+  letter-spacing: .06rem;
+  color: #091010;
+}
+
+header {
+  background-color: #F5DADF;
+  height: 80vh;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+}
+
+.header__nav-home:hover {
+  cursor: pointer;
+  transform: scale(.9);
+}
+
+/*
+.header__nav-menu-bar {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+.header__nav-menu-bar:hover {
+  color: black;
+}
+
+*/
+
+.header__heading {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 40vh 35vh;
+  margin-top: 10%;
+  height: 65vh;
+}
+
+.header__heading-block {
+  background-color: #F5DADF;
+  min-width: 100px;
+}
+
+.header__heading-block-2 {
+  grid-row: 2 / 3;
+  background-color: #C47BED;;
+  min-width: 100px;
+}
+
+.header__heading-block-2:hover {
+  background-color: bisque;
+}
+
+.header__heading-text {
+  background-color: orangered;
+  grid-area: 1 / 2 / 3 / 3;
+  text-align: center;
+  text-size-adjust: 80%;
+  font-size: 10vw;
+  padding-top: 10%;
+  word-spacing: 2rem;
+}
+
+.header__heading-text:hover {
+  background-color: #E0FFFF;
+}
+
+@media(max-width:800px) {
+  .header__heading-text {
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 55%;
+    word-spacing: .5rem;
+  }
+}
+
+/* Cursor */
+
+@media (hover: hover) and (pointer: fine) {
+  #cursor {
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  #cursor .cursor--inner {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(127, 255, 0, .7);
+  }
+}
+
+
+
+
+
+
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f4f0e8;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 200px;*/
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 1px;
+  text-decoration: none;
+  font-family: nimbus-sans-extended, sans-serif;
+  font-weight: 300;
+  font-size: 42px;
+  color: #C47BED;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: black;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 50px;
+}
